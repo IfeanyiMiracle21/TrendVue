@@ -1,5 +1,5 @@
 // Mock data for social media platforms
-const socialData = [
+        const socialData = [
             {
                 platform: 'Instagram',
                 icon: '📷',
