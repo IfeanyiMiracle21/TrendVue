@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendVue – Social Media Dashboard</title>
+
+    <!-- Favicon (blank for now – replace with your own later) -->
+    <link rel="icon" href="data:,">
+
+    <!-- Chart.js (deferred for faster page load) -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+
+    <!-- Local styles -->
     <link rel="stylesheet" href="style.css">
-    <!-- Load Chart.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <title>TrendVue</title>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
-    
+
+    <!-- Theme toggle – uses Sun/Moon icons and is fully accessible -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark / light mode">
+        <span class="sun">Sun</span><span class="moon">Moon</span>
+    </button>
+
     <div class="container">
         <header>
-            <h1>📊 Social Media Dashboard</h1>
+            <h1>Social Media Dashboard</h1>
             <p class="subtitle">Track your social media performance in real-time</p>
         </header>
 
+        <!-- Platform stat cards – will be filled by JavaScript -->
         <div class="stats-grid" id="statsGrid"></div>
 
-        <div class="charts-section">
+        <!-- Engagement chart + summary cards -->
+        <section class="charts-section">
             <h2 class="section-title">Engagement Overview</h2>
+
             <div class="chart-container">
-                <canvas id="engagementChart"></canvas>
+                <canvas id="engagementChart" aria-label="Engagement rate per platform"></canvas>
             </div>
 
             <div class="engagement-grid">
@@ -43,8 +57,10 @@
                     <div class="engagement-label">Avg Engagement Rate</div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
+
+    <!-- Local script – placed at the end for performance -->
     <script src="script.js"></script>
 </body>
 </html>
