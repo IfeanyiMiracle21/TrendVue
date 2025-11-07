@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrendVue – Social Media Dashboard</title>
-
-    <!-- Favicon (blank for now – replace with your own later) -->
     <link rel="icon" href="data:,">
-
-    <!-- Chart.js (deferred for faster page load) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-
-    <!-- Local styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Theme toggle – uses Sun/Moon icons and is fully accessible -->
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark / light mode">
         <span class="sun">Sun</span><span class="moon">Moon</span>
     </button>
@@ -27,11 +19,7 @@
             <h1>Social Media Dashboard</h1>
             <p class="subtitle">Track your social media performance in real-time</p>
         </header>
-
-        <!-- Platform stat cards – will be filled by JavaScript -->
         <div class="stats-grid" id="statsGrid"></div>
-
-        <!-- Engagement chart + summary cards -->
         <section class="charts-section">
             <h2 class="section-title">Engagement Overview</h2>
 
