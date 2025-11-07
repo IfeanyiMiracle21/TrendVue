@@ -7,6 +7,41 @@
     <title>Document</title>
 </head>
 <body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
     
+    <div class="container">
+        <header>
+            <h1>📊 Social Media Dashboard</h1>
+            <p class="subtitle">Track your social media performance in real-time</p>
+        </header>
+
+        <div class="stats-grid" id="statsGrid"></div>
+
+        <div class="charts-section">
+            <h2 class="section-title">Engagement Overview</h2>
+            <div class="chart-container">
+                <canvas id="engagementChart"></canvas>
+            </div>
+
+            <div class="engagement-grid">
+                <div class="engagement-card">
+                    <div class="engagement-value" id="totalLikes">0</div>
+                    <div class="engagement-label">Total Likes</div>
+                </div>
+                <div class="engagement-card">
+                    <div class="engagement-value" id="totalComments">0</div>
+                    <div class="engagement-label">Total Comments</div>
+                </div>
+                <div class="engagement-card">
+                    <div class="engagement-value" id="totalShares">0</div>
+                    <div class="engagement-label">Total Shares</div>
+                </div>
+                <div class="engagement-card">
+                    <div class="engagement-value" id="avgEngagement">0%</div>
+                    <div class="engagement-label">Avg Engagement Rate</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
