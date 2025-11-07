@@ -1,13 +1,60 @@
 // Mock data for social media platforms
 const socialData = [
-    { platform: 'Instagram', icon: 'Camera', followers: 45230, growth: '+12.5%', trend: 'up', engagement: 4.8, posts: 156 },
-    { platform: 'Twitter', icon: 'Bird', followers: 28940, growth: '+8.3%', trend: 'up', engagement: 3.2, posts: 432 },
-    { platform: 'Facebook', icon: 'Thumbs Up', followers: 62100, growth: '-2.1%', trend: 'down', engagement: 2.1, posts: 89 },
-    { platform: 'YouTube', icon: 'Play', followers: 12500, growth: '+15.7%', trend: 'up', engagement: 6.5, posts: 34 },
-    { platform: 'LinkedIn', icon: 'Briefcase', followers: 8720, growth: '+5.4%', trend: 'up', engagement: 5.2, posts: 67 },
-    { platform: 'TikTok', icon: 'Music Note', followers: 89300, growth: '+28.9%', trend: 'up', engagement: 8.7, posts: 203 }
+    {
+        platform: 'Instagram',
+        icon: '📷',  // Emoji: Camera
+        followers: 45230,
+        growth: '+12.5%',
+        trend: 'up',
+        engagement: 4.8,
+        posts: 156
+    },
+    {
+        platform: 'Twitter',
+        icon: '🐦',  // Emoji: Bird (or '✖️' for X rebrand)
+        followers: 28940,
+        growth: '+8.3%',
+        trend: 'up',
+        engagement: 3.2,
+        posts: 432
+    },
+    {
+        platform: 'Facebook',
+        icon: '👍',  // Emoji: Thumbs Up
+        followers: 62100,
+        growth: '-2.1%',
+        trend: 'down',
+        engagement: 2.1,
+        posts: 89
+    },
+    {
+        platform: 'YouTube',
+        icon: '▶️',  // Emoji: Play Button
+        followers: 12500,
+        growth: '+15.7%',
+        trend: 'up',
+        engagement: 6.5,
+        posts: 34
+    },
+    {
+        platform: 'LinkedIn',
+        icon: '💼',  // Emoji: Briefcase
+        followers: 8720,
+        growth: '+5.4%',
+        trend: 'up',
+        engagement: 5.2,
+        posts: 67
+    },
+    {
+        platform: 'TikTok',
+        icon: '🎵',  // Emoji: Musical Notes
+        followers: 89300,
+        growth: '+28.9%',
+        trend: 'up',
+        engagement: 8.7,
+        posts: 203
+    }
 ];
-
 let chartInstance = null;
 
 // Format numbers with K/M suffix
