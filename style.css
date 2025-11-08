@@ -37,8 +37,6 @@ h1 {
   opacity: 0.9;
   font-size: 1.1em;
 }
-
-/* --------------------- 4. Theme Toggle --------------------- */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -75,7 +73,6 @@ body.dark-mode .theme-toggle {
 body.dark-mode .theme-toggle .sun { display: none; }
 body.dark-mode .theme-toggle .moon { display: inline; }
 
-/* --------------------- 5. Stats Grid --------------------- */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -145,7 +142,6 @@ body.dark-mode .theme-toggle .moon { display: inline; }
   color: #721c24;
 }
 
-/* --------------------- 6. Charts Section --------------------- */
 .charts-section {
   background: white;
   border-radius: 15px;
@@ -172,7 +168,6 @@ canvas {
   border-radius: 8px;
 }
 
-/* --------------------- 7. Engagement Cards --------------------- */
 .engagement-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -204,7 +199,6 @@ canvas {
   font-size: 0.9em;
 }
 
-/* --------------------- 8. Dark Mode --------------------- */
 body.dark-mode {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
@@ -242,7 +236,6 @@ body.dark-mode canvas {
   filter: brightness(1.1) contrast(1.05);
 }
 
-/* --------------------- 9. Responsive Design --------------------- */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.8em;
