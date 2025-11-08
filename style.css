@@ -3,8 +3,6 @@
    Author: Ifeanyi Miracle
    Version: 1.0
    ========================================================================== */
-
-/* --------------------- 1. Reset & Base --------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -19,14 +17,10 @@ body {
   transition: background 0.4s ease, color 0.3s ease;
   line-height: 1.6;
 }
-
-/* --------------------- 2. Layout --------------------- */
 .container {
   max-width: 1400px;
   margin: 0 auto;
 }
-
-/* --------------------- 3. Header --------------------- */
 header {
   text-align: center;
   color: white;
