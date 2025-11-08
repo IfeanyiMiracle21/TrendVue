@@ -1,8 +1,7 @@
-// Mock data for social media platforms
 const socialData = [
     {
         platform: 'Instagram',
-        icon: '📷',  // Emoji: Camera
+        icon: '📷', 
         followers: 45230,
         growth: '+12.5%',
         trend: 'up',
@@ -11,7 +10,7 @@ const socialData = [
     },
     {
         platform: 'Twitter',
-        icon: '🐦',  // Emoji: Bird (or '✖️' for X rebrand)
+        icon: '🐦',  
         followers: 28940,
         growth: '+8.3%',
         trend: 'up',
@@ -20,7 +19,7 @@ const socialData = [
     },
     {
         platform: 'Facebook',
-        icon: '👍',  // Emoji: Thumbs Up
+        icon: '👍',  
         followers: 62100,
         growth: '-2.1%',
         trend: 'down',
@@ -29,7 +28,7 @@ const socialData = [
     },
     {
         platform: 'YouTube',
-        icon: '▶️',  // Emoji: Play Button
+        icon: '▶️',  
         followers: 12500,
         growth: '+15.7%',
         trend: 'up',
@@ -38,7 +37,7 @@ const socialData = [
     },
     {
         platform: 'LinkedIn',
-        icon: '💼',  // Emoji: Briefcase
+        icon: '💼',  
         followers: 8720,
         growth: '+5.4%',
         trend: 'up',
@@ -47,7 +46,7 @@ const socialData = [
     },
     {
         platform: 'TikTok',
-        icon: '🎵',  // Emoji: Musical Notes
+        icon: '🎵',  
         followers: 89300,
         growth: '+28.9%',
         trend: 'up',
@@ -57,14 +56,12 @@ const socialData = [
 ];
 let chartInstance = null;
 
-// Format numbers with K/M suffix
 function formatNumber(num) {
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
     if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
     return num.toString();
 }
 
-// Animate counter
 function animateValue(id, start, end, duration = 1000) {
     const obj = document.getElementById(id);
     let startTime = null;
@@ -73,7 +70,7 @@ function animateValue(id, start, end, duration = 1000) {
         if (startTime === null) startTime = currentTime;
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        const ease = progress * (2 - progress); // Smooth easing
+        const ease = progress * (2 - progress); 
         const value = Math.floor(ease * (end - start) + start);
         obj.textContent = formatNumber(value);
 
@@ -82,7 +79,6 @@ function animateValue(id, start, end, duration = 1000) {
     requestAnimationFrame(animation);
 }
 
-// Render stat cards
 function renderStats() {
     const grid = document.getElementById('statsGrid');
     grid.innerHTML = '';
@@ -100,7 +96,7 @@ function renderStats() {
         `;
         grid.appendChild(card);
     });
-    // Animate follower counts
+    
     setTimeout(() => {
         socialData.forEach((data, i) => {
             const valueEl = grid.children[i].querySelector('.stat-value');
@@ -109,7 +105,6 @@ function renderStats() {
     }, 100);
 }
 
-// Update engagement stats with animation
 function updateEngagementStats() {
     const totalFollowers = socialData.reduce((sum, p) => sum + p.followers, 0);
     const avgEngagement = (socialData.reduce((sum, p) => sum + p.engagement, 0) / socialData.length).toFixed(1);
@@ -117,13 +112,12 @@ function updateEngagementStats() {
     animateValue('totalLikes', 0, Math.floor(totalFollowers * 0.05), 1200);
     animateValue('totalComments', 0, Math.floor(totalFollowers * 0.01), 1200);
     animateValue('totalShares', 0, Math.floor(totalFollowers * 0.008), 1200);
-    animateValue('avgEngagement', 0, avgEngagement * 10, 1000); // Fake progress
+    animateValue('avgEngagement', 0, avgEngagement * 10, 1000); 
     setTimeout(() => {
         document.getElementById('avgEngagement').textContent = avgEngagement + '%';
     }, 1100);
 }
 
-// Create or update chart with theme
 function createChart() {
     const ctx = document.getElementById('engagementChart').getContext('2d');
     const isDark = document.body.classList.contains('dark-mode');
@@ -175,14 +169,13 @@ function createChart() {
     });
 }
 
-// Theme toggle with persistence + chart update
 function toggleTheme() {
     document.body.classList.toggle('dark-mode');
     localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-    createChart(); // Re-render chart with correct colors
+    createChart(); 
 }
 
-// Load saved theme
+
 function loadTheme() {
     const saved = localStorage.getItem('theme');
     if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -190,7 +183,6 @@ function loadTheme() {
     }
 }
 
-// Initialize dashboard
 function init() {
     loadTheme();
     renderStats();
